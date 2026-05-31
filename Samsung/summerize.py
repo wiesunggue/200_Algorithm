@@ -129,8 +129,8 @@ class SegmentTree:
             self.arr[node] = self.initialarr[left]
             return self.arr[node]
         mid = (left + right) // 2
-        leftdata = self.initialarr(left, mid, node * 2)
-        rightdata = self.initialarr(mid + 1, right, node * 2 + 1)
+        leftdata = self.initialize(left, mid, node * 2)
+        rightdata = self.initialize(mid + 1, right, node * 2 + 1)
 
         self.arr[node] = leftdata + rightdata
         return self.arr[node]
